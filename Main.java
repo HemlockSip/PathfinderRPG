@@ -1,3 +1,4 @@
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -18,7 +19,12 @@ public class Main {
             
             switch (choice) {
                 case 1:
-                    System.out.println("Option 1 selected");
+                    System.out.println("Il tiro per colpire è: ");
+                    List<Integer> tiriPerColpire = Feats.tiroPerColpire(1);
+                    System.out.println(tiriPerColpire);
+                    System.out.println("Il danno è: ");
+                    List<Integer> danni = Feats.calcoloDeiDanni(tiriPerColpire);
+                    System.out.println(danni);
                     break;
                 case 2:
                     System.out.println("Option 2 selected");

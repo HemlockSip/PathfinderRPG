@@ -31,12 +31,21 @@ public class Feats {
     }
 
     public static List<Integer> calcoloDeiDanni(List<Integer> tiriPerColpire){
-        //TODO implementa la logica del colpo critico
+        //TODO raffina la logica del danno per colpo critico
         List<Integer> danni = new ArrayList<Integer>();
-        for (int i = 0; i < tiriPerColpire.size(); i++) {
-            danni.add((int)Math.floor(Math.random() *(8 - 1 + 1) + 1));
+        for (Integer tiroPerColpire : tiriPerColpire) {
+            if (tiroPerColpire == 20) {
+                danni.add((int)Math.floor(Math.random() *(8 - 1 + 1) + 1) * 4);
+            } else {
+                danni.add((int)Math.floor(Math.random() *(8 - 1 + 1) + 1));
+            }
         }
         return danni;
     }
+
+    //Combiniamo il tiro per colpire con il danno
+
+
+
 }   
 
