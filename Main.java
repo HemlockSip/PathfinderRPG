@@ -19,11 +19,14 @@ public class Main {
             
             switch (choice) {
                 case 1:
+                    System.out.println("Vuoi applicare il Tiro Letale? (si/no)");
+                    String decisione = scanner.next();
+                    Boolean tiroLetale = Feats.tiroLetale(decisione);
                     System.out.println("Il tiro per colpire è: ");
-                    List<Integer> tiriPerColpire = Feats.tiroPerColpire(1);
+                    List<Integer> tiriPerColpire = Feats.tiroPerColpire(1,tiroLetale);
                     System.out.println(tiriPerColpire);
                     System.out.println("Il danno è: ");
-                    List<Integer> danni = Feats.calcoloDeiDanni(tiriPerColpire);
+                    List<Integer> danni = Feats.calcoloDeiDanni(tiriPerColpire,tiroLetale);
                     System.out.println(danni);
                     break;
                 case 2:
