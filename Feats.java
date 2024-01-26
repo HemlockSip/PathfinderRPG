@@ -21,29 +21,44 @@ public class Feats {
         numeroDiAttacchi += 1;
     }
 
-    public static List<Integer> tiroPerColpire(Integer numeroDiAttacchi){
+    public static List<Integer> tiroPerColpire(Integer numeroDiAttacchi,Boolean tiroLetale){
         //TODO implementa la logica del colpo critico
         List<Integer> tiriPerColpire = new ArrayList<Integer>();
         for (int i = 0; i < numeroDiAttacchi; i++) {
-            tiriPerColpire.add((int)Math.floor(Math.random() *(20 - 1 + 1) + 1));
+            if (tiroLetale == true) {
+                tiriPerColpire.add((int)Math.floor(Math.random() *(20 - 1 + 1) + 1) - 4);
+            } else if (tiroLetale == false) {
+                tiriPerColpire.add((int)Math.floor(Math.random() *(20 - 1 + 1) + 1));
+                
+            }
         }
         return tiriPerColpire;
     }
 
-    public static List<Integer> calcoloDeiDanni(List<Integer> tiriPerColpire){
+    public static List<Integer> calcoloDeiDanni(List<Integer> tiriPerColpire,Boolean tiroLetale){
         //TODO raffina la logica del danno per colpo critico
         List<Integer> danni = new ArrayList<Integer>();
+        Integer modificatoreTiroLetale = 8;
+        Integer moltiplicatoreDannoCritico = 4;
+        Integer modificatoreMagicoArma = 1;
         for (Integer tiroPerColpire : tiriPerColpire) {
             if (tiroPerColpire == 20) {
-                danni.add((int)Math.floor(Math.random() *(8 - 1 + 1) + 1) * 4);
+                danni.add((int)Math.floor(Math.random() *(8 - 1 + 1) + modificatoreMagicoArma) + modificatoreTiroLetale * moltiplicatoreDannoCritico);
             } else {
-                danni.add((int)Math.floor(Math.random() *(8 - 1 + 1) + 1));
+                danni.add((int)Math.floor(Math.random() *(8 - 1 + 1) + modificatoreMagicoArma) + modificatoreTiroLetale);
             }
         }
         return danni;
     }
 
-    //Combiniamo il tiro per colpire con il danno
+    // qui invece imposto Tiro Letale, che è un feat che permette di fare un tiro per colpire con un malus di -4, ma se colpisci fai il doppio dei danni
+    public static boolean tiroLetale(String decisione){
+        if (decisione == "si") {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
 
 
