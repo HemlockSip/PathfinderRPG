@@ -1,6 +1,7 @@
 import java.lang.Math;
 import java.util.List;
 import java.util.ArrayList;
+import java.util.Random;
 public class Feats {
 
     //tiro preciso, se sei entro 9 metri dal bersaglio, ottieni +1 al tiro per colpire
@@ -60,7 +61,13 @@ public class Feats {
         }
     }
 
+    // ora provo ad aggiungere la gesta Mira Focalizzata, che permette di aggiungere il modificatore di carisma ai danni di tutti gli attacchi
+    public static Integer miraFocalizzata(Integer modificatoreCarisma, Integer danni){
+        danni += modificatoreCarisma;
+        return danni;
+    }
 
+    // ora invece provo a creare una funzione che mi permetta di simulare il lancio di un dado da 4 facce (d4)
 
-}   
-
+    
+}
