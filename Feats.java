@@ -44,9 +44,9 @@ public class Feats {
         Integer modificatoreMagicoArma = 1;
         for (Integer tiroPerColpire : tiriPerColpire) {
             if (tiroPerColpire == 20) {
-                danni.add((int)Math.floor(Math.random() *(8 - 1 + 1) + modificatoreMagicoArma) + modificatoreTiroLetale * moltiplicatoreDannoCritico);
+                danni.add(DadiDaLanciare.lancioDelDadoDaOtto() + modificatoreMagicoArma + modificatoreTiroLetale * moltiplicatoreDannoCritico);
             } else {
-                danni.add((int)Math.floor(Math.random() *(8 - 1 + 1) + modificatoreMagicoArma) + modificatoreTiroLetale);
+                danni.add(DadiDaLanciare.lancioDelDadoDaOtto() + modificatoreMagicoArma + modificatoreTiroLetale);
             }
         }
         return danni;
