@@ -1,5 +1,6 @@
 import java.util.List;
 import java.util.Scanner;
+import java.util.Map;
 
 public class Main {
     //create a boilerplate CLI menu
@@ -11,7 +12,7 @@ public class Main {
             System.out.println("Benvenuto nel Menu di Gioco!");
             System.out.println("Seleziona una delle opzioni seguenti:");
             System.out.println("1. Effettua un Attacco ");
-            System.out.println("2. Option 2");
+            System.out.println("2. Visualizza la progressione dei TS");
             System.out.println("3. Option 3");
             System.out.println("4. Exit");
             
@@ -30,7 +31,11 @@ public class Main {
                     System.out.println(danni);
                     break;
                 case 2:
-                    System.out.println("Option 2 selected");
+                    System.out.println("Visualizza la progressione dei TS");
+                    Map<Integer, Integer> progressioneTsGunslinger = CharacterProgressionClass.progressioneTiroSalvezzaTempraGunslinger();
+                    for (Integer livello : progressioneTsGunslinger.keySet()){
+                        System.out.println(progressioneTsGunslinger.get(livello));
+                    }
                     break;
                 case 3:
                     System.out.println("Option 3 selected");

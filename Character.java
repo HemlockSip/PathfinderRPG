@@ -1,3 +1,5 @@
+import java.util.Map;
+
 public class Character {
 
 
@@ -27,12 +29,12 @@ public class Character {
 
     // In questa sezione conserverò i modificatori delle caratteristiche del personaggio
 
-    private Integer modificatoreForza;
-    private Integer modificatoreDestrezza;
-    private Integer modificatoreCostituzione;
-    private Integer modificatoreIntelligenza;
-    private Integer modificatoreSaggezza;
-    private Integer modificatoreCarisma;
+    private Integer modificatoreForza = (int)Math.floor((punteggioForza - 10) / 2);
+    private Integer modificatoreDestrezza = (int)Math.floor((punteggioDestrezza - 10) / 2);
+    private Integer modificatoreCostituzione = (int)Math.floor((punteggioCostituzione - 10) / 2);
+    private Integer modificatoreIntelligenza = (int)Math.floor((punteggioIntelligenza - 10) / 2);
+    private Integer modificatoreSaggezza = (int)Math.floor((punteggioSaggezza - 10) / 2);
+    private Integer modificatoreCarisma = (int)Math.floor((punteggioCarisma - 10) / 2);
 
 
     // In questa sezione conserverò i tiri salvezza del personaggio
@@ -47,7 +49,7 @@ public class Character {
     private Integer bonusAttaccoBase;
 
 
-
+    
 
 
 }
