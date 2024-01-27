@@ -1,36 +1,53 @@
-public interface Character {
+public class Character {
 
-    Integer getPunteggioForza();
-    Integer getPunteggioDestrezza();
-    Integer getPunteggioCostituzione();
-    Integer getPunteggioIntelligenza();
-    Integer getPunteggioSaggezza();
-    Integer getPunteggioCarisma();
 
-    // Definisci i metodi per calcolare i modificatori
-    default Integer modificatoreForza(){
-        return (getPunteggioForza() - 10) / 2;
-    }
+    // Qui consrviamo il nome del personaggio
 
-    default Integer modificatoreDestrezza(){
-        return (getPunteggioDestrezza() - 10) / 2;
-    }
+    private String nomePersonaggio;
 
-    default Integer modificatoreCostituzione(){
-        return (getPunteggioCostituzione() - 10) / 2;
-    }
+    // Qui conserviamo la razza del personaggio
 
-    default Integer modificatoreIntelligenza(){
-        return (getPunteggioIntelligenza() - 10) / 2;
-    }
+    private String razzaPersonaggio;
 
-    default Integer modificatoreSaggezza(){
-        return (getPunteggioSaggezza() - 10) / 2;
-    }
+    // Qui conserviamo la classe del personaggio
 
-    default Integer modificatoreCarisma(){
-        return (getPunteggioCarisma() - 10) / 2;
-    }
+    private String classePersonaggio;
 
+    // Qui conserviamo il livello del personaggio  
+
+    private Integer livelloPersonaggio;
+
+    // In questa sezione conserverò le caratteristiche del personaggio
+    private Integer punteggioForza;
+    private Integer punteggioDestrezza;
+    private Integer punteggioCostituzione;
+    private Integer punteggioIntelligenza;
+    private Integer punteggioSaggezza;
+    private Integer punteggioCarisma;
+
+    // In questa sezione conserverò i modificatori delle caratteristiche del personaggio
+
+    private Integer modificatoreForza;
+    private Integer modificatoreDestrezza;
+    private Integer modificatoreCostituzione;
+    private Integer modificatoreIntelligenza;
+    private Integer modificatoreSaggezza;
+    private Integer modificatoreCarisma;
+
+
+    // In questa sezione conserverò i tiri salvezza del personaggio
+
+    private Integer tiroSalvezzaTempra;
+    private Integer tiroSalvezzaRiflessi;
+    private Integer tiroSalvezzaVolonta;
     
+    
+    // In questa sezione conserverò il bonus d'attacco base del personaggio 
+
+    private Integer bonusAttaccoBase;
+
+
+
+
+
 }
