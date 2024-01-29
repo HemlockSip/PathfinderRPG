@@ -54,7 +54,7 @@ public class Feats {
 
     // qui invece imposto Tiro Letale, che è un feat che permette di fare un tiro per colpire con un malus di -4, ma se colpisci fai il doppio dei danni
     public static boolean tiroLetale(String decisioneTiroLetale){
-        Integer malusTiroLetale = 4;
+        Integer malusTxCTiroLetale = 4;
         Integer bonusDannoTiroLetale = 8;
         if (decisioneTiroLetale == "si") {
             return true;
