@@ -20,6 +20,14 @@ public class Main {
             
             switch (choice) {
                 case 1:
+                // il flusso logico dovrebbe essere questo:           
+                // 1. Scegli se vuoi applicare il tiro letale
+                // 2. Scegli se vuoi applicare il tiro rapido
+                // 3. Scegli se vuoi applicare il tiro preciso
+                // 4. Comincia a tirare per colpire
+                // 5. Scegli se applicare Mira Focalizzata
+                // 6. A questo punto, calcola i danni
+                
                     System.out.println("Vuoi applicare il Tiro Letale? (si/no)");
                     String decisione = scanner.next();
                     Boolean tiroLetale = Feats.tiroLetale(decisione);
