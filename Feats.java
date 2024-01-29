@@ -27,9 +27,9 @@ public class Feats {
         List<Integer> tiriPerColpire = new ArrayList<Integer>();
         for (int i = 0; i < numeroDiAttacchi; i++) {
             if (tiroLetale == true) {
-                tiriPerColpire.add((int)Math.floor(Math.random() *(20 - 1 + 1) + 1) - 4);
+                tiriPerColpire.add(DadiDaLanciare.lancioDelDadoDaVenti() - 4);
             } else if (tiroLetale == false) {
-                tiriPerColpire.add((int)Math.floor(Math.random() *(20 - 1 + 1) + 1));
+                tiriPerColpire.add(DadiDaLanciare.lancioDelDadoDaVenti() + 1);
                 
             }
         }
@@ -53,8 +53,10 @@ public class Feats {
     }
 
     // qui invece imposto Tiro Letale, che è un feat che permette di fare un tiro per colpire con un malus di -4, ma se colpisci fai il doppio dei danni
-    public static boolean tiroLetale(String decisione){
-        if (decisione == "si") {
+    public static boolean tiroLetale(String decisioneTiroLetale){
+        Integer malusTiroLetale = 4;
+        Integer bonusDannoTiroLetale = 8;
+        if (decisioneTiroLetale == "si") {
             return true;
         } else {
             return false;
