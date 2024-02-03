@@ -7,13 +7,15 @@ public class Main {
     public static void main(String[] args) { {
                 Scanner scanner = new Scanner(System.in);
                 boolean running = true;
+                Integer livelloPersonaggio = 12;
+                Integer numeroDiAttacchi; 
         
         while (running) {
             System.out.println("Benvenuto nel Menu di Gioco!");
             System.out.println("Seleziona una delle opzioni seguenti:");
-            System.out.println("1. Effettua un Attacco ");
+            System.out.println("1. Effettua un Attacco Completo ");
             System.out.println("2. Visualizza la progressione dei TS");
-            System.out.println("3. Option 3");
+            System.out.println("3. Effettua un Attacco Singolo");
             System.out.println("4. Exit");
             
             int choice = scanner.nextInt();
@@ -32,7 +34,7 @@ public class Main {
                     String decisione = scanner.next();
                     Boolean tiroLetale = Feats.tiroLetale(decisione);
                     System.out.println("Il tiro per colpire è: ");
-                    List<Integer> tiriPerColpire = Feats.tiroPerColpire(1,tiroLetale);
+                    List<Integer> tiriPerColpire = Feats.tiroPerColpire(CharacterProgressionClass.progressioneBonusAttaccoBase.get(livelloPersonaggio),tiroLetale);
                     System.out.println(tiriPerColpire);
                     System.out.println("Il danno è: ");
                     List<Integer> danni = Feats.calcoloDeiDanni(tiriPerColpire,tiroLetale);
@@ -46,7 +48,8 @@ public class Main {
                     }
                     break;
                 case 3:
-                    System.out.println("Option 3 selected");
+                    System.out.println("Attacco Singolo");
+                    
                     break;
                 case 4:
                     running = false;

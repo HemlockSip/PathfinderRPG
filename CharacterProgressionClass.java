@@ -1,25 +1,44 @@
 import java.util.Map;
 import java.util.HashMap;
+import java.util.List;
 
 public class CharacterProgressionClass {
     
     // qui conservo le mappe di progressione dei bonus d'attacco base e dei tiri salvezza
     // idealmente ogni classe del personaggio sarà una istanza di questa classe, e avrà le sue mappe di progressione
 
-    private Map<Integer,Integer> progressioneBonusAttaccoBase;
+    public static Map<Integer,Integer> progressioneBonusAttaccoBase;
     private Map<Integer,Integer> progressioneTiroSalvezzaTempra;
     private Map<Integer,Integer> progressioneTiroSalvezzaRiflessi;
     private Map<Integer,Integer> progressioneTiroSalvezzaVolonta; 
 
+    public static Map<Integer,List<Integer>> progressioneNumeroDiAttacchi; 
+    public static Integer numeroDiAttacchi;
+    // numeroDiAttacchi deve essere in qualkche modo governata dal livello del personaggio
+    // la progressione qui sotto è corretta ma manca di un metodo che permetta di dedurre il numero di attacchi in base al livello del personaggio
 
 
-    private static Map<Integer,Integer> progressioneBonusAttaccoBaseGunslinger(){
-        Map<Integer,Integer> progressioneBonusAttaccoBaseGunslinger = new HashMap<Integer,Integer>();
-        
+    public static void settaProgressioneNumeroDiAttacchi(){
+        for (Integer bonusAttaccoBase:progressioneBonusAttaccoBase.values()){
+            if(bonusAttaccoBase >= 1 && bonusAttaccoBase <= 5 ){
+                numeroDiAttacchi = 1;
+            } else if (bonusAttaccoBase >= 6 && bonusAttaccoBase <= 10){
+                numeroDiAttacchi = 2;
+            } else if (bonusAttaccoBase >= 11 && bonusAttaccoBase <= 15){
+                numeroDiAttacchi = 3;
+            } else if (bonusAttaccoBase >= 16 && bonusAttaccoBase <= 20){
+                numeroDiAttacchi = 4;
+            }
+        } 
+    }
+
+
+
+    private static void progressioneBonusAttaccoBaseGunslinger(){   
+        // qui imposto la progressione del bonus d'attacco base per la classe Gunslinger
         for (int i = 1; i == 20; i++) {
-            progressioneBonusAttaccoBaseGunslinger.put(i, i);
+            progressioneBonusAttaccoBase.put(i, i);
         }
-        return progressioneBonusAttaccoBaseGunslinger;
     };
     
     public static Map<Integer,Integer> progressioneTiroSalvezzaTempraGunslinger(){
