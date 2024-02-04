@@ -14,7 +14,7 @@ public class CharacterProgressionClass {
 
     public static Map<Integer,List<Integer>> progressioneNumeroDiAttacchi; 
     public static Integer numeroDiAttacchi;
-    // numeroDiAttacchi deve essere in qualkche modo governata dal livello del personaggio
+    // numeroDiAttacchi deve essere in qualche modo governata dal livello del personaggio
     // la progressione qui sotto è corretta ma manca di un metodo che permetta di dedurre il numero di attacchi in base al livello del personaggio
 
 
