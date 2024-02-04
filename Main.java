@@ -49,7 +49,8 @@ public class Main {
                     break;
                 case 3:
                     System.out.println("Attacco Singolo");
-                    
+                    List<Integer> tiriPerColpire = Feats.tiroPerColpire(CharacterProgressionClass.progressioneBonusAttaccoBase.get(livelloPersonaggio),false);
+                    System.out.println(tiriPerColpire);
                     break;
                 case 4:
                     running = false;
