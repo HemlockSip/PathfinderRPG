@@ -32,7 +32,21 @@ public class CharacterProgressionClass {
         } 
     }
 
-
+    public static Map<Integer,List<Integer>> progressioneTiriPerColpireGunslinger(){
+        Map<Integer,List<Integer>> progressioneTiriPerColpireGunslinger = new HashMap<>();
+        for (int i = 1; i <= 20; i++){
+            if (i >= 1 && i <= 5){
+                progressioneTiriPerColpireGunslinger.put(i, List.of(i));
+            } else if (i >= 6 && i <= 10){
+                progressioneTiriPerColpireGunslinger.put(i, List.of(i,i-5));
+            } else if (i >= 11 && i <= 15){
+                progressioneTiriPerColpireGunslinger.put(i, List.of(i,i-5,i-10));
+            } else if (i >= 16 && i <= 20){
+                progressioneTiriPerColpireGunslinger.put(i, List.of(i,i-5,i-10,i-15));
+            }
+        }
+        return progressioneTiriPerColpireGunslinger;
+    }
 
     private static void progressioneBonusAttaccoBaseGunslinger(){   
         // qui imposto la progressione del bonus d'attacco base per la classe Gunslinger

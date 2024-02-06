@@ -49,11 +49,15 @@ public class Main {
                     break;
                 case 3:
                     System.out.println("Attacco Singolo");
-                    List<Integer> tiriPerColpire = Feats.tiroPerColpire(CharacterProgressionClass.progressioneBonusAttaccoBase.get(livelloPersonaggio),false);
-                    System.out.println(tiriPerColpire);
+                    List<Integer> tiriPerColpireAttaccoSingolo = Feats.tiroPerColpire(CharacterProgressionClass.progressioneBonusAttaccoBase.get(livelloPersonaggio),false);
+                    System.out.println(tiriPerColpireAttaccoSingolo);
                     break;
                 case 4:
                     running = false;
+                    break;
+                case 5:
+                    System.out.println("Visualizza la progressione dei Tiri per Colpire");
+                    System.out.println(CharacterProgressionClass.progressioneTiriPerColpireGunslinger());
                     break;
                 default:
                     System.out.println("Invalid choice");
