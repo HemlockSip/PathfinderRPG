@@ -16,10 +16,11 @@ public class Feats {
 
     }
 
-    public static void tiroRapido(Integer numeroDiAttacchi) {
+    public static void tiroRapido(List<Integer> tiriPerColpire) {
         //aggiungi un tiro per colpire con l'arco o balestra, ma subisci -2 al tiro per colpire
         //TODO applicare il malus al tiro per colpire
-        numeroDiAttacchi += 1;
+        //idealmente il metodo deve accettare come argomento la lista del numero di tiri per colpire e il tiro per colpire stesso
+        tiriPerColpire.add(null); //bisogna aggiungere il tiro per colpire più alto che il personaggio può fare
     }
 
     public static List<Integer> tiroPerColpire(Integer numeroDiAttacchi,Boolean tiroLetale){
