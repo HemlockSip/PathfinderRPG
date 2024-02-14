@@ -56,8 +56,15 @@ public class Main {
                     running = false;
                     break;
                 case 5:
-                    System.out.println("Visualizza la progressione dei Tiri per Colpire");
-                    System.out.println(CharacterProgressionClass.progressioneTiriPerColpireGunslinger());
+                    System.out.println("In questa sezione del menù vedrai i tiri per colpire del livello del tuo personaggio");
+                    System.out.println("Inizializzo la progressione dei tiri per colpire del Gunslinger:");
+                    CharacterProgressionClass.progressioneNumeroDiAttacchi = CharacterProgressionClass.progressioneTiriPerColpireGunslinger();
+                    System.out.println("Fatto!");
+                    System.out.println("Inserisci il livello del tuo personaggio: ");
+                    livelloPersonaggio = scanner.nextInt();
+                    List<Integer> attacchiDelPersionaggio = CharacterProgressionClass.progressioneNumeroDiAttacchi.get(livelloPersonaggio);
+                    System.out.println("I tiri per colpire del tuo personaggio sono: ");
+                    System.out.println(attacchiDelPersionaggio);
                     break;
                 default:
                     System.out.println("Invalid choice");
