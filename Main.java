@@ -15,6 +15,8 @@ public class Main {
                 System.out.println("Fatto!");
                 //inizializzo la progressione dei Tiri Salvezza
                 Map<Integer, Integer> progressioneTsTempraGunslinger = CharacterProgressionClass.progressioneTiroSalvezzaTempraGunslinger();
+                Map<Integer, Integer> progressioneTsRiflessiGunslinger = CharacterProgressionClass.progressioneTiroSalvezzaRiflessiGunslinger();
+                Map<Integer, Integer> progressioneTsVolontaGunslinger = CharacterProgressionClass.progressioneTiroSalvezzaVolontaGunslinger();
 
         
         while (running) {
