@@ -79,7 +79,57 @@ public class CharacterProgressionClass {
         progressioneTiroSalvezzaTempraGunslinger.put(20, 12);
         return progressioneTiroSalvezzaTempraGunslinger;
     };
-    
+
+    public static Map<Integer,Integer> progressioneTiroSalvezzaRiflessiGunslinger(){
+        Map<Integer,Integer> progressioneTiroSalvezzaRiflessiGunslinger = new HashMap<>();
+        progressioneTiroSalvezzaRiflessiGunslinger.put(1, 2);
+        progressioneTiroSalvezzaRiflessiGunslinger.put(2, 3);
+        progressioneTiroSalvezzaRiflessiGunslinger.put(3, 3);
+        progressioneTiroSalvezzaRiflessiGunslinger.put(4, 4);
+        progressioneTiroSalvezzaRiflessiGunslinger.put(5, 4);
+        progressioneTiroSalvezzaRiflessiGunslinger.put(6, 5);
+        progressioneTiroSalvezzaRiflessiGunslinger.put(7, 5);
+        progressioneTiroSalvezzaRiflessiGunslinger.put(8, 6);
+        progressioneTiroSalvezzaRiflessiGunslinger.put(9, 6);
+        progressioneTiroSalvezzaRiflessiGunslinger.put(10, 7);
+        progressioneTiroSalvezzaRiflessiGunslinger.put(11, 7);
+        progressioneTiroSalvezzaRiflessiGunslinger.put(12, 8);
+        progressioneTiroSalvezzaRiflessiGunslinger.put(13, 8);
+        progressioneTiroSalvezzaRiflessiGunslinger.put(14, 9);
+        progressioneTiroSalvezzaRiflessiGunslinger.put(15, 9);
+        progressioneTiroSalvezzaRiflessiGunslinger.put(16, 10);
+        progressioneTiroSalvezzaRiflessiGunslinger.put(17, 10);
+        progressioneTiroSalvezzaRiflessiGunslinger.put(18, 11);
+        progressioneTiroSalvezzaRiflessiGunslinger.put(19, 11);
+        progressioneTiroSalvezzaRiflessiGunslinger.put(20, 12);
+        return progressioneTiroSalvezzaRiflessiGunslinger;
+    }
+
+    public static Map<Integer,Integer> progressioneTiroSalvezzaVolontaGunslinger(){
+        Map<Integer,Integer> progressioneTiroSalvezzaVolontaGunslinger = new HashMap<>();
+        progressioneTiroSalvezzaVolontaGunslinger.put(1, 0);
+        progressioneTiroSalvezzaVolontaGunslinger.put(2,0);
+        progressioneTiroSalvezzaVolontaGunslinger.put(3, 1);
+        progressioneTiroSalvezzaVolontaGunslinger.put(4, 1);
+        progressioneTiroSalvezzaVolontaGunslinger.put(5, 1);
+        progressioneTiroSalvezzaVolontaGunslinger.put(6, 2);
+        progressioneTiroSalvezzaVolontaGunslinger.put(7, 2);
+        progressioneTiroSalvezzaVolontaGunslinger.put(8, 2);
+        progressioneTiroSalvezzaVolontaGunslinger.put(9, 3);
+        progressioneTiroSalvezzaVolontaGunslinger.put(10, 3);
+        progressioneTiroSalvezzaVolontaGunslinger.put(11, 3);
+        progressioneTiroSalvezzaVolontaGunslinger.put(12, 4);
+        progressioneTiroSalvezzaVolontaGunslinger.put(13, 4);
+        progressioneTiroSalvezzaVolontaGunslinger.put(14, 4);
+        progressioneTiroSalvezzaVolontaGunslinger.put(15, 5);
+        progressioneTiroSalvezzaVolontaGunslinger.put(16, 5);
+        progressioneTiroSalvezzaVolontaGunslinger.put(17, 5);
+        progressioneTiroSalvezzaVolontaGunslinger.put(18, 6);
+        progressioneTiroSalvezzaVolontaGunslinger.put(19, 6);
+        progressioneTiroSalvezzaVolontaGunslinger.put(20, 6);
+        return progressioneTiroSalvezzaVolontaGunslinger;
+    }
+
 
 
 }

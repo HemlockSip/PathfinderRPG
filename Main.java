@@ -9,6 +9,13 @@ public class Main {
                 boolean running = true;
                 Integer livelloPersonaggio = 12;
                 Integer numeroDiAttacchi; 
+                //le liste con la progressione dovrebbero essere inizializzate subito appena avviato il programma
+                System.out.println("Inizializzo la progressione dei tiri per colpire del Gunslinger:");
+                CharacterProgressionClass.progressioneNumeroDiAttacchi = CharacterProgressionClass.progressioneTiriPerColpireGunslinger();
+                System.out.println("Fatto!");
+                //inizializzo la progressione dei Tiri Salvezza
+                Map<Integer, Integer> progressioneTsTempraGunslinger = CharacterProgressionClass.progressioneTiroSalvezzaTempraGunslinger();
+
         
         while (running) {
             System.out.println("Benvenuto nel Menu di Gioco!");
@@ -41,11 +48,7 @@ public class Main {
                     System.out.println(danni);
                     break;
                 case 2:
-                    System.out.println("Visualizza la progressione dei TS");
-                    Map<Integer, Integer> progressioneTsGunslinger = CharacterProgressionClass.progressioneTiroSalvezzaTempraGunslinger();
-                    for (Integer livello : progressioneTsGunslinger.keySet()){
-                        System.out.println(progressioneTsGunslinger.get(livello));
-                    }
+                    System.out.println("Work IN PROGRESS");
                     break;
                 case 3:
                     System.out.println("Attacco Singolo");
@@ -57,9 +60,6 @@ public class Main {
                     break;
                 case 5:
                     System.out.println("In questa sezione del menù vedrai i tiri per colpire del livello del tuo personaggio");
-                    System.out.println("Inizializzo la progressione dei tiri per colpire del Gunslinger:");
-                    CharacterProgressionClass.progressioneNumeroDiAttacchi = CharacterProgressionClass.progressioneTiriPerColpireGunslinger();
-                    System.out.println("Fatto!");
                     System.out.println("Inserisci il livello del tuo personaggio: ");
                     livelloPersonaggio = scanner.nextInt();
                     List<Integer> attacchiDelPersionaggio = CharacterProgressionClass.progressioneNumeroDiAttacchi.get(livelloPersonaggio);
