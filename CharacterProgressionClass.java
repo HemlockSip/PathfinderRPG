@@ -8,7 +8,7 @@ public class CharacterProgressionClass {
     // idealmente ogni classe del personaggio sarà una istanza di questa classe, e avrà le sue mappe di progressione
 
     public static Map<Integer,Integer> progressioneBonusAttaccoBase;
-    private Map<Integer,Integer> progressioneTiroSalvezzaTempra;
+    public static Map<Integer,Integer> progressioneTiroSalvezzaTempra;
     private Map<Integer,Integer> progressioneTiroSalvezzaRiflessi;
     private Map<Integer,Integer> progressioneTiroSalvezzaVolonta; 
 
@@ -56,28 +56,28 @@ public class CharacterProgressionClass {
     };
     
     public static Map<Integer,Integer> progressioneTiroSalvezzaTempraGunslinger(){
-        Map<Integer,Integer> progressioneTiroSalvezzaTempraGunslinger = new HashMap<>();
-        progressioneTiroSalvezzaTempraGunslinger.put(1, 2);
-        progressioneTiroSalvezzaTempraGunslinger.put(2, 3);
-        progressioneTiroSalvezzaTempraGunslinger.put(3, 3);
-        progressioneTiroSalvezzaTempraGunslinger.put(4, 4);
-        progressioneTiroSalvezzaTempraGunslinger.put(5, 4);
-        progressioneTiroSalvezzaTempraGunslinger.put(6, 5);
-        progressioneTiroSalvezzaTempraGunslinger.put(7, 5);
-        progressioneTiroSalvezzaTempraGunslinger.put(8, 6);
-        progressioneTiroSalvezzaTempraGunslinger.put(9, 6);
-        progressioneTiroSalvezzaTempraGunslinger.put(10, 7);
-        progressioneTiroSalvezzaTempraGunslinger.put(11, 7);
-        progressioneTiroSalvezzaTempraGunslinger.put(12, 8);
-        progressioneTiroSalvezzaTempraGunslinger.put(13, 8);
-        progressioneTiroSalvezzaTempraGunslinger.put(14, 9);
-        progressioneTiroSalvezzaTempraGunslinger.put(15, 9);
-        progressioneTiroSalvezzaTempraGunslinger.put(16, 10);
-        progressioneTiroSalvezzaTempraGunslinger.put(17, 10);
-        progressioneTiroSalvezzaTempraGunslinger.put(18, 11);
-        progressioneTiroSalvezzaTempraGunslinger.put(19, 11);
-        progressioneTiroSalvezzaTempraGunslinger.put(20, 12);
-        return progressioneTiroSalvezzaTempraGunslinger;
+        CharacterProgressionClass.progressioneTiroSalvezzaTempra = new HashMap<>();
+        progressioneTiroSalvezzaTempra.put(1, 2);
+        progressioneTiroSalvezzaTempra.put(2, 3);
+        progressioneTiroSalvezzaTempra.put(3, 3);
+        progressioneTiroSalvezzaTempra.put(4, 4);
+        progressioneTiroSalvezzaTempra.put(5, 4);
+        progressioneTiroSalvezzaTempra.put(6, 5);
+        progressioneTiroSalvezzaTempra.put(7, 5);
+        progressioneTiroSalvezzaTempra.put(8, 6);
+        progressioneTiroSalvezzaTempra.put(9, 6);
+        progressioneTiroSalvezzaTempra.put(10, 7);
+        progressioneTiroSalvezzaTempra.put(11, 7);
+        progressioneTiroSalvezzaTempra.put(12, 8);
+        progressioneTiroSalvezzaTempra.put(13, 8);
+        progressioneTiroSalvezzaTempra.put(14, 9);
+        progressioneTiroSalvezzaTempra.put(15, 9);
+        progressioneTiroSalvezzaTempra.put(16, 10);
+        progressioneTiroSalvezzaTempra.put(17, 10);
+        progressioneTiroSalvezzaTempra.put(18, 11);
+        progressioneTiroSalvezzaTempra.put(19, 11);
+        progressioneTiroSalvezzaTempra.put(20, 12);
+        return progressioneTiroSalvezzaTempra;
     };
 
     public static Map<Integer,Integer> progressioneTiroSalvezzaRiflessiGunslinger(){
