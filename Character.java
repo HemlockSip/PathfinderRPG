@@ -1,4 +1,6 @@
+import java.util.List;
 import java.util.Map;
+import java.util.ArrayList;
 
 public class Character {
 
@@ -88,9 +90,9 @@ public class Character {
 
     // qui di seguito i getters dei modificatori delle caratteristiche
 
-    //public static Integer getModificatoreForza() {
-    //    return modificatoreForza;
-    //}
+    public static Integer getModificatoreForza() {
+        return modificatoreForza;
+    }
 
     public static Integer getModificatoreDestrezza() {
         return modificatoreDestrezza;
@@ -125,12 +127,26 @@ public class Character {
 
     
     
-    // In questa sezione conserverò il bonus d'attacco base del personaggio 
-
-    private Integer bonusAttaccoBase;
+    // Qui calcolo il tiro per colpire in mischia
 
 
-    
+    //TODO: qui sotto in realtà sto facendo un attacco completo, mi serve un metodo che mi permetta di fare un attacco singolo
+    public static List<Integer> calcoloTiroPerColpireInMischia(Integer livelloPersonaggio,List<Integer> tiriPerColpire){
+        //in realtà qui bisogna fare questa operazione per ogni tiro per colpire disponibile
+        List<Integer> tiriPerColpireInMischia = new ArrayList<>();
+        for (Integer tiroPerColpire : tiriPerColpire){
+            tiriPerColpireInMischia.add(tiroPerColpire + CharacterProgressionClass.progressioneBonusAttaccoBase.get(livelloPersonaggio) + getModificatoreForza());
+        }
+
+
+        return tiriPerColpireInMischia;
+    }
+
+    // Qui calcolo il tiro per colpire a distanza
+
+    public static Integer calcoloTiroPerColpireADistanza(Integer livelloPersonaggio){
+        return DadiDaLanciare.lancioDelDadoDaVenti() + CharacterProgressionClass.progressioneBonusAttaccoBase.get(livelloPersonaggio) + getModificatoreDestrezza();
+    }
 
 
 }

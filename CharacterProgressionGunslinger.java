@@ -5,20 +5,20 @@ import java.util.Map;
 public class CharacterProgressionGunslinger implements CharacterProgression {
 
     
-    public static Map<Integer,List<Integer>> progressioneTiriPerColpire(){
-        Map<Integer,List<Integer>> progressioneTiriPerColpireGunslinger = new HashMap<>();
+    public static Map<Integer,List<Integer>> progressioneBonusAttaccoBase(){
+        Map<Integer,List<Integer>> progressioneBonusAttaccoBaseGunslinger = new HashMap<>();
         for (int i = 1; i <= 20; i++){
             if (i >= 1 && i <= 5){
-                progressioneTiriPerColpireGunslinger.put(i, List.of(i));
+                progressioneBonusAttaccoBaseGunslinger.put(i, List.of(i));
             } else if (i >= 6 && i <= 10){
-                progressioneTiriPerColpireGunslinger.put(i, List.of(i,i-5));
+                progressioneBonusAttaccoBaseGunslinger.put(i, List.of(i,i-5));
             } else if (i >= 11 && i <= 15){
-                progressioneTiriPerColpireGunslinger.put(i, List.of(i,i-5,i-10));
+                progressioneBonusAttaccoBaseGunslinger.put(i, List.of(i,i-5,i-10));
             } else if (i >= 16 && i <= 20){
-                progressioneTiriPerColpireGunslinger.put(i, List.of(i,i-5,i-10,i-15));
+                progressioneBonusAttaccoBaseGunslinger.put(i, List.of(i,i-5,i-10,i-15));
             }
         }
-        return progressioneTiriPerColpireGunslinger;
+        return progressioneBonusAttaccoBaseGunslinger;
     }
 
     public static Map<Integer,Integer> progressioneTiroSalvezzaTempra(){
