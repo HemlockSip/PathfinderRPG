@@ -1,62 +1,28 @@
-import java.util.Map;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
-public class CharacterProgressionClass {
+public class CharacterProgressionGunslinger implements CharacterProgression {
+
     
-    // qui conservo le mappe di progressione dei bonus d'attacco base e dei tiri salvezza
-    // idealmente ogni classe del personaggio sarà una istanza di questa classe, e avrà le sue mappe di progressione
-
-    public static Map<Integer,Integer> progressioneBonusAttaccoBase;
-    public static Map<Integer,Integer> progressioneTiroSalvezzaTempra;
-    private Map<Integer,Integer> progressioneTiroSalvezzaRiflessi;
-    private Map<Integer,Integer> progressioneTiroSalvezzaVolonta; 
-
-    public static Map<Integer,List<Integer>> progressioneNumeroDiAttacchi; 
-    public static Integer numeroDiAttacchi;
-    // numeroDiAttacchi deve essere in qualche modo governata dal livello del personaggio
-    // la progressione qui sotto è corretta ma manca di un metodo che permetta di dedurre il numero di attacchi in base al livello del personaggio
-
-
-    public static void settaProgressioneNumeroDiAttacchi(){
-        for (Integer bonusAttaccoBase:progressioneBonusAttaccoBase.values()){
-            if(bonusAttaccoBase >= 1 && bonusAttaccoBase <= 5 ){
-                numeroDiAttacchi = 1;
-            } else if (bonusAttaccoBase >= 6 && bonusAttaccoBase <= 10){
-                numeroDiAttacchi = 2;
-            } else if (bonusAttaccoBase >= 11 && bonusAttaccoBase <= 15){
-                numeroDiAttacchi = 3;
-            } else if (bonusAttaccoBase >= 16 && bonusAttaccoBase <= 20){
-                numeroDiAttacchi = 4;
-            }
-        } 
-    }
-
-    public static Map<Integer,List<Integer>> progressioneTiriPerColpireGunslinger(){
-        Map<Integer,List<Integer>> progressioneTiriPerColpireGunslinger = new HashMap<>();
+    public static Map<Integer,List<Integer>> progressioneBonusAttaccoBase(){
+        Map<Integer,List<Integer>> progressioneBonusAttaccoBaseGunslinger = new HashMap<>();
         for (int i = 1; i <= 20; i++){
             if (i >= 1 && i <= 5){
-                progressioneTiriPerColpireGunslinger.put(i, List.of(i));
+                progressioneBonusAttaccoBaseGunslinger.put(i, List.of(i));
             } else if (i >= 6 && i <= 10){
-                progressioneTiriPerColpireGunslinger.put(i, List.of(i,i-5));
+                progressioneBonusAttaccoBaseGunslinger.put(i, List.of(i,i-5));
             } else if (i >= 11 && i <= 15){
-                progressioneTiriPerColpireGunslinger.put(i, List.of(i,i-5,i-10));
+                progressioneBonusAttaccoBaseGunslinger.put(i, List.of(i,i-5,i-10));
             } else if (i >= 16 && i <= 20){
-                progressioneTiriPerColpireGunslinger.put(i, List.of(i,i-5,i-10,i-15));
+                progressioneBonusAttaccoBaseGunslinger.put(i, List.of(i,i-5,i-10,i-15));
             }
         }
-        return progressioneTiriPerColpireGunslinger;
+        return progressioneBonusAttaccoBaseGunslinger;
     }
 
-    private static void progressioneBonusAttaccoBaseGunslinger(){   
-        // qui imposto la progressione del bonus d'attacco base per la classe Gunslinger
-        for (int i = 1; i == 20; i++) {
-            progressioneBonusAttaccoBase.put(i, i);
-        }
-    };
-    
-    public static Map<Integer,Integer> progressioneTiroSalvezzaTempraGunslinger(){
-        CharacterProgressionClass.progressioneTiroSalvezzaTempra = new HashMap<>();
+    public static Map<Integer,Integer> progressioneTiroSalvezzaTempra(){
+        Map<Integer,Integer> progressioneTiroSalvezzaTempra = new HashMap<>();
         progressioneTiroSalvezzaTempra.put(1, 2);
         progressioneTiroSalvezzaTempra.put(2, 3);
         progressioneTiroSalvezzaTempra.put(3, 3);
@@ -80,7 +46,7 @@ public class CharacterProgressionClass {
         return progressioneTiroSalvezzaTempra;
     };
 
-    public static Map<Integer,Integer> progressioneTiroSalvezzaRiflessiGunslinger(){
+    public static Map<Integer,Integer> progressioneTiroSalvezzaRiflessi(){
         Map<Integer,Integer> progressioneTiroSalvezzaRiflessiGunslinger = new HashMap<>();
         progressioneTiroSalvezzaRiflessiGunslinger.put(1, 2);
         progressioneTiroSalvezzaRiflessiGunslinger.put(2, 3);
@@ -105,7 +71,7 @@ public class CharacterProgressionClass {
         return progressioneTiroSalvezzaRiflessiGunslinger;
     }
 
-    public static Map<Integer,Integer> progressioneTiroSalvezzaVolontaGunslinger(){
+    public static Map<Integer,Integer> progressioneTiroSalvezzaVolonta(){
         Map<Integer,Integer> progressioneTiroSalvezzaVolontaGunslinger = new HashMap<>();
         progressioneTiroSalvezzaVolontaGunslinger.put(1, 0);
         progressioneTiroSalvezzaVolontaGunslinger.put(2,0);
@@ -129,7 +95,6 @@ public class CharacterProgressionClass {
         progressioneTiroSalvezzaVolontaGunslinger.put(20, 6);
         return progressioneTiroSalvezzaVolontaGunslinger;
     }
-
 
 
 }
