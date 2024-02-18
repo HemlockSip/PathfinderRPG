@@ -9,8 +9,8 @@ public class CharacterProgressionClass {
 
     public static Map<Integer,Integer> progressioneBonusAttaccoBase;
     public static Map<Integer,Integer> progressioneTiroSalvezzaTempra;
-    private Map<Integer,Integer> progressioneTiroSalvezzaRiflessi;
-    private Map<Integer,Integer> progressioneTiroSalvezzaVolonta; 
+    public static Map<Integer,Integer> progressioneTiroSalvezzaRiflessi;
+    public static Map<Integer,Integer> progressioneTiroSalvezzaVolonta; 
 
     public static Map<Integer,List<Integer>> progressioneNumeroDiAttacchi; 
     public static Integer numeroDiAttacchi;
