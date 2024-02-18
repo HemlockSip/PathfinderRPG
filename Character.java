@@ -81,12 +81,12 @@ public class Character {
 
     // In questa sezione conserverò i modificatori delle caratteristiche del personaggio
 
-    private static Integer modificatoreForza = (int)Math.floor((getPunteggioForza() - 10) / 2);
-    private static Integer modificatoreDestrezza = (int)Math.floor((getPunteggioDestrezza() - 10) / 2);
-    private static Integer modificatoreCostituzione = (int)Math.floor((getPunteggioCostituzione() - 10) / 2);
-    private static Integer modificatoreIntelligenza = (int)Math.floor((getPunteggioIntelligenza() - 10) / 2);
-    private static Integer modificatoreSaggezza = (int)Math.floor((getPunteggioSaggezza() - 10) / 2);
-    private static Integer modificatoreCarisma = (int)Math.floor((getPunteggioCarisma() - 10) / 2);
+    private static Integer modificatoreForza = null;
+    private static Integer modificatoreDestrezza = null;
+    private static Integer modificatoreCostituzione = null;
+    private static Integer modificatoreIntelligenza = null;
+    private static Integer modificatoreSaggezza = null;
+    private static Integer modificatoreCarisma = null;
 
     // qui di seguito i getters dei modificatori delle caratteristiche
 
@@ -94,24 +94,48 @@ public class Character {
         return modificatoreForza;
     }
 
+    public static void setModificatoreForza() {
+        Character.modificatoreForza = (int)Math.floor((getPunteggioForza() - 10) / 2);
+    }
+
     public static Integer getModificatoreDestrezza() {
         return modificatoreDestrezza;
+    }
+
+    public static void setModificatoreDestrezza() {
+        Character.modificatoreDestrezza = (int)Math.floor((getPunteggioDestrezza() - 10) / 2);
     }
 
     public static Integer getModificatoreCostituzione() {
         return modificatoreCostituzione;
     }
 
+    public static void setModificatoreCostituzione() {
+        Character.modificatoreCostituzione = (int)Math.floor((getPunteggioCostituzione() - 10) / 2);
+    }
+
     public static Integer getModificatoreIntelligenza() {
         return modificatoreIntelligenza;
+    }
+
+    public static void setModificatoreIntelligenza() {
+        Character.modificatoreIntelligenza = (int)Math.floor((getPunteggioIntelligenza() - 10) / 2);
     }
 
     public static Integer getModificatoreSaggezza() {
         return modificatoreSaggezza;
     }
 
+    public static void setModificatoreSaggezza() {
+        Character.modificatoreSaggezza = (int)Math.floor((getPunteggioSaggezza() - 10) / 2);
+    }
+
     public static Integer getModificatoreCarisma() {
         return modificatoreCarisma;
+    }
+
+    public static void setModificatoreCarisma() {
+        Character.modificatoreCarisma = (int)Math.floor((getPunteggioCarisma() - 10) / 2);
     }
 
     // In questa sezione conserverò i tiri salvezza del personaggio
