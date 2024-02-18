@@ -9,7 +9,18 @@ public class Main {
         boolean running = true;
         Integer livelloPersonaggio = 12;
         Integer punteggioForza = 10;
-        Character.setPunteggioForza(punteggioForza); //TODO: qui il programma da errore perchè devo ancora capire come mai ma è legato a queste variabili delle caratteristiche del personaggio
+        Integer punteggioDestrezza = 22;
+        Integer punteggioCostituzione = 12;
+        Integer punteggioIntelligenza = 14;
+        Integer punteggioSaggezza = 16;
+        Integer punteggioCarisma = 19;
+        Character.setPunteggioForza(punteggioForza);
+        Character.setPunteggioDestrezza(punteggioDestrezza);
+        Character.setPunteggioCostituzione(punteggioCostituzione);
+        Character.setPunteggioIntelligenza(punteggioIntelligenza);
+        Character.setPunteggioSaggezza(punteggioSaggezza);
+        Character.setPunteggioCarisma(punteggioCarisma);
+        //TODO: qui il programma da errore perchè devo ancora capire come mai ma è legato a queste variabili delle caratteristiche del personaggio
         Integer numeroDiAttacchi; 
         //le liste con la progressione dovrebbero essere inizializzate subito appena avviato il programma
         System.out.println("Inizializzo la progressione dei tiri per colpire del Gunslinger:");

@@ -22,12 +22,12 @@ public class Character {
     private Integer livelloPersonaggio;
 
     // In questa sezione conserverò le caratteristiche del personaggio
-    private static Integer punteggioForza;
-    private static Integer punteggioDestrezza;
-    private static Integer punteggioCostituzione;
-    private static Integer punteggioIntelligenza;
-    private static Integer punteggioSaggezza;
-    private static Integer punteggioCarisma;
+    public static Integer punteggioForza;
+    public static Integer punteggioDestrezza;
+    public static Integer punteggioCostituzione;
+    public static Integer punteggioIntelligenza;
+    public static Integer punteggioSaggezza;
+    public static Integer punteggioCarisma;
 
     public static Integer getPunteggioForza() {
         return punteggioForza;
