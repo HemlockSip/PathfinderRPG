@@ -125,13 +125,20 @@ public class Character {
          return Character.tiroSalvezzaTempra = DadiDaLanciare.lancioDelDadoDaVenti() + CharacterProgressionClass.progressioneTiroSalvezzaTempra.get(livelloPersonaggio) + getModificatoreCostituzione();
     }
 
-    
-    
+    public static Integer calcoloTiroSalvezzaRiflessi(Integer livelloPersonaggio){
+        return Character.tiroSalvezzaRiflessi = DadiDaLanciare.lancioDelDadoDaVenti() + CharacterProgressionClass.progressioneTiroSalvezzaRiflessi.get(livelloPersonaggio) + getModificatoreDestrezza();
+    }
+
+    public static Integer calcoloTiroSalvezzaVolonta(Integer livelloPersonaggio){
+        return Character.tiroSalvezzaVolonta = DadiDaLanciare.lancioDelDadoDaVenti() + CharacterProgressionClass.progressioneTiroSalvezzaVolonta.get(livelloPersonaggio) + getModificatoreSaggezza();
+    }
+
+
     // Qui calcolo il tiro per colpire in mischia
 
 
     //TODO: qui sotto in realtà sto facendo un attacco completo, mi serve un metodo che mi permetta di fare un attacco singolo
-    public static List<Integer> calcoloTiroPerColpireInMischia(Integer livelloPersonaggio,List<Integer> tiriPerColpire){
+    public static List<Integer> attaccoCompleto(Integer livelloPersonaggio,List<Integer> tiriPerColpire){
         //in realtà qui bisogna fare questa operazione per ogni tiro per colpire disponibile
         List<Integer> tiriPerColpireInMischia = new ArrayList<>();
         for (Integer tiroPerColpire : tiriPerColpire){
@@ -140,6 +147,12 @@ public class Character {
 
 
         return tiriPerColpireInMischia;
+    }
+
+    public static List<Integer> attaccoSingolo(Integer livelloPersonaggio){
+        List<Integer> tiroPerColpireInMischia = new ArrayList<>();
+        tiroPerColpireInMischia.add(DadiDaLanciare.lancioDelDadoDaVenti() + CharacterProgressionClass.progressioneBonusAttaccoBase.get(livelloPersonaggio) + getModificatoreForza());
+        return tiroPerColpireInMischia;
     }
 
     // Qui calcolo il tiro per colpire a distanza
