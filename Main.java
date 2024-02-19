@@ -4,10 +4,11 @@ import java.util.Map;
 
 public class Main {
     //create a boilerplate CLI menu
+
     public static void main(String[] args) { {
         Scanner scanner = new Scanner(System.in);
         boolean running = true;
-        Integer livelloPersonaggio = 12;
+        //Character.setLivelloPersonaggio(12);
         Integer punteggioForza = 10;
         Integer punteggioDestrezza = 22;
         Integer punteggioCostituzione = 12;
@@ -56,7 +57,7 @@ public class Main {
                 String decisione = scanner.next();
                 Boolean tiroLetale = Feats.tiroLetale(decisione);
                 System.out.println("Il tiro per colpire è: ");
-                List<Integer> tiriPerColpire = Feats.tiroPerColpire(CharacterProgressionClass.progressioneBonusAttaccoBase.get(livelloPersonaggio),tiroLetale);
+                List<Integer> tiriPerColpire = Feats.tiroPerColpire(CharacterProgressionClass.progressioneBonusAttaccoBase.get(Character.getLivelloPersonaggio()),tiroLetale);
                 System.out.println(tiriPerColpire);
                 System.out.println("Il danno è: ");
                 List<Integer> danni = Feats.calcoloDeiDanni(tiriPerColpire,tiroLetale);
@@ -67,11 +68,11 @@ public class Main {
                 Character.setPunteggioCostituzione(10);
                 System.out.println(Character.getPunteggioCostituzione());
                 System.out.println("Il tiro salvezza sulla tempra è: ");
-                System.out.println(Character.calcoloTiroSalvezzaTermpra(livelloPersonaggio));
+                System.out.println(Character.calcoloTiroSalvezzaTermpra(Character.getLivelloPersonaggio()));
                 break;
                 case 3:
                 System.out.println("Attacco Singolo");
-                List<Integer> tiriPerColpireAttaccoSingolo = Feats.tiroPerColpire(CharacterProgressionClass.progressioneBonusAttaccoBase.get(livelloPersonaggio),false);
+                List<Integer> tiriPerColpireAttaccoSingolo = Feats.tiroPerColpire(CharacterProgressionClass.progressioneBonusAttaccoBase.get(Character.getLivelloPersonaggio()),false);
                 System.out.println(tiriPerColpireAttaccoSingolo);
                 break;
                 case 4:
@@ -80,8 +81,9 @@ public class Main {
                 case 5:
                 System.out.println("In questa sezione del menù vedrai i tiri per colpire del livello del tuo personaggio");
                 System.out.println("Inserisci il livello del tuo personaggio: ");
-                livelloPersonaggio = scanner.nextInt();
-                List<Integer> attacchiDelPersionaggio = CharacterProgressionClass.progressioneNumeroDiAttacchi.get(livelloPersonaggio);
+                Integer livelloPersonaggio = scanner.nextInt();
+                Character.setLivelloPersonaggio(livelloPersonaggio);
+                List<Integer> attacchiDelPersionaggio = CharacterProgressionClass.progressioneNumeroDiAttacchi.get(Character.getLivelloPersonaggio());
                 System.out.println("I tiri per colpire del tuo personaggio sono: ");
                 System.out.println(attacchiDelPersionaggio);
                 break;

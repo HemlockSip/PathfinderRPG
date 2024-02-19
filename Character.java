@@ -19,7 +19,17 @@ public class Character {
 
     // Qui conserviamo il livello del personaggio  
 
-    private Integer livelloPersonaggio;
+    private static Integer livelloPersonaggio;
+
+    public static Integer getLivelloPersonaggio() {
+        return livelloPersonaggio;
+    }
+
+    public static void setLivelloPersonaggio(Integer livelloPersonaggio) {
+        Character.livelloPersonaggio = livelloPersonaggio;
+    }
+
+
 
     // In questa sezione conserverò le caratteristiche del personaggio
     public static Integer punteggioForza;
