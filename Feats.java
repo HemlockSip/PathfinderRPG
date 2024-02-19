@@ -53,7 +53,8 @@ public class Feats {
         return danni;
     }
 
-    // qui invece imposto Tiro Letale, che è un feat che permette di fare un tiro per colpire con un malus di -4, ma se colpisci fai il doppio dei danni
+    // qui invece imposto Tiro Letale, che è un feat che permette di fare un tiro per colpire con un malus di -4, ma se colpisci fai 8 danni
+    // TODO rivedere completamente la logica di tiro letale
     public static boolean tiroLetale(String decisioneTiroLetale){
         Integer malusTxCTiroLetale = 4;
         Integer bonusDannoTiroLetale = 8;
@@ -70,7 +71,14 @@ public class Feats {
         return danni;
     }
 
-    // ora invece provo a creare una funzione che mi permetta di simulare il lancio di un dado da 4 facce (d4)
+    public static List<Integer> ColpoLetale(List<Integer>tiriPerColpire){
+        List<Integer> tiriPerColpireColpoLetale = new ArrayList<>();
+        for (Integer tiroPerColpire : tiriPerColpire){
+            Integer tiro = Character.calcoloTiroPerColpireADistanza(Character.getLivelloPersonaggio());
 
+
+        }
+        return tiriPerColpireColpoLetale;
+    }
     
 }
